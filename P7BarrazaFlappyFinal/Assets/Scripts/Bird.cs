@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
 
-    public float UpForce = 50f;
+    public float UpForce = 15f;
 
     private bool isDead = false;
     private Rigidbody2D rb2d;
@@ -25,7 +25,7 @@ public class Bird : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                rb2d.velocity = Vector3.zero;
+                rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, UpForce));
                 anim.SetTrigger("flap");
             }
@@ -33,7 +33,9 @@ public class Bird : MonoBehaviour
     }
     private void OnCollisionEnter2D()
     {
+        rb2d.velocity = Vector2.zero;
         isDead = true;
         anim.SetTrigger("die");
+        GameController.instance.BirdDied();
     }
 }
