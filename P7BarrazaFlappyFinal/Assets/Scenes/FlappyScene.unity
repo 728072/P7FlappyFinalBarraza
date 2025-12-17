@@ -991,7 +991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94ab0f6cf3f46a4eb51b26e7074dc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!1 &1683332688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a496d4c43f71d0c4aa601c33ec3e60b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpForce: 15
+  UpForce: 5
 --- !u!95 &1942132290
 Animator:
   serializedVersion: 5
